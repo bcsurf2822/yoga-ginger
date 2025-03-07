@@ -102,6 +102,7 @@ export default function Home() {
                     alt="Yoga Ginger Studio"
                     width={600}
                     height={400}
+                    priority
                     className="w-full h-full object-cover"
                   />
                 </div>
