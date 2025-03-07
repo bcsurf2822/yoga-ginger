@@ -13,7 +13,7 @@ export default function Home() {
           }}
         ></div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
           <div className="max-w-4xl mx-auto text-center mt-[-6rem] sm:mt-[-3rem]">
             <div className="relative z-30 pb-4">
               <h1 className="text-7xl sm:text-9xl md:text-9xl font-normal mb-4 sm:mb-8 gradient-text-secondary relative" style={{ 
@@ -24,7 +24,7 @@ export default function Home() {
               </h1>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 gradient-text drop-shadow-md relative z-20">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 gradient-text drop-shadow-md relative z-30">
               Move With The Breath, Experience The Journey
             </h1>
 
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
         
         {/* Full-width beach image section */}
-        <div className="absolute bottom-0 left-0 right-0 h-80 z-10 w-screen">
+        <div className="absolute bottom-0 left-0 right-0 h-80 z-20 w-screen">
           {/* Beach image background with fading effect */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             <div 
@@ -56,8 +56,8 @@ export default function Home() {
           </div>
           
           {/* Buttons with relative positioning to appear on top of the image */}
-          <div className="relative z-10 h-full flex flex-col justify-center items-center" style={{ top: "-40px" }}>
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="relative z-10 h-full flex flex-col justify-center items-center" style={{ top: "0px", marginTop: "20px" }}>
+            <div className="flex flex-col sm:flex-row justify-center gap-6 sm:mt-0 mt-10">
               <Link href="/schedule" className="btn-primary shadow-lg text-lg py-3 px-8">
                 View Schedule
               </Link>
