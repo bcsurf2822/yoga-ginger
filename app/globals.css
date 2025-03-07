@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-blue: #4a9ce0;
+  --primary-pink: #ff6b9c;
+  --primary-darker-blue: #2f7ab8;
+  --primary-darker-pink: #db4c7c;
+  --primary-gradient: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-pink) 100%);
+  --secondary-gradient: linear-gradient(135deg, var(--primary-darker-blue) 0%, var(--primary-darker-pink) 100%);
 }
 
 @theme inline {
@@ -22,5 +28,47 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-text-secondary {
+  background: var(--secondary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  font-family: var(--font-great-vibes), cursive, var(--font-sans);
+}
+
+.gradient-bg {
+  background: var(--primary-gradient);
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 rounded-full text-white font-medium transition-all;
+    background: var(--primary-gradient);
+  }
+  
+  .btn-primary:hover {
+    @apply shadow-lg transform -translate-y-0.5;
+  }
+}
+
+/* Add padding-top to main content to account for fixed navbar */
+main {
+  padding-top: 6rem;
 }
