@@ -21,8 +21,11 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata = {
-  title: "Yoga Ginger - Hot Yoga Studio",
-  description: "Experience the benefits of hot yoga at Yoga Ginger Studio",
+  title: "Yoga Ginger",
+  description: "Website for Suzanne Chew at Yoga Ginger",
+  icons: {
+    icon: '/logos/yogaGingerLogo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
