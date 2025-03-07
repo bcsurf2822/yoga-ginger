@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
         <div
